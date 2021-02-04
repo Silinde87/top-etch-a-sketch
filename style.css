@@ -14,10 +14,11 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
+    background-color: #81d9a1;
 }
 #container{
     background-color: #E90418;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 750px;
     width: 800px;
     -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.71);
@@ -43,8 +44,7 @@ body{
     box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.71);    
 }
 .square-grid{
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+   
 }
 #controls{
     height: 100px;
