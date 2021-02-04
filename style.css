@@ -1,4 +1,56 @@
+/*Alignements*/
+body, 
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    margin: 0;
+}
+
 body{
     margin: 0;
     padding: 0;
+    height: 100vh;
+}
+#container{
+    background-color: #E90418;
+    border-radius: 10px;
+    height: 700px;
+    width: 750px;
+}
+#title{
+    color: #FFE4BA;
+    font-size: 60px;
+    margin: 10px;
+}
+#grid{
+    border: 1px solid black;
+    background-color: #EFEFEF;
+    height: 550px;
+    width: 550px;
+    border-radius: 10px;
+}
+#controls{
+    height: 100px;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px
+}
+#reset-controller{
+    background-color: #FFFFEA;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.round-controller{
+    background-color: #FFFFEA;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
 }
