@@ -1,11 +1,12 @@
 //JS
 
-let gridSize = 16;
+let gridSize = 32;
 const COLOR_BLACK = "black";
-let COLOR_RANDOM = getRandomRgb();
 
 let grid = document.getElementById('grid');
 let eraseButton = document.getElementById('reset-controller')
+let sizeControler = document.getElementById('size-controller');
+let colorControler = document.getElementById('color-controller');
 
 buildGrid(gridSize);
 
@@ -36,8 +37,13 @@ function buildGrid(size){
 
 //this function paints the grid
 function paintGrid(elem, color){
-    let square = elem.target;    
-    square.style.backgroundColor = color;
+    console.log(elem.buttons);
+    if(elem.buttons == 1){
+        if(elem.target.classList == 'square-grid'){
+            let square = elem.target;    
+            square.style.backgroundColor = color;
+        }  
+    }
 }
 
 function eraseGrid(){   
@@ -53,14 +59,18 @@ function getRandomRgb() {
     return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
 
-grid.addEventListener('mouseover', e=>{    
-    if(e.target.classList == "square-grid"){
-        //paintGrid(e, COLOR_BLACK);
-        paintGrid(e, getRandomRgb());
-    }    
+grid.addEventListener('mousedown', event =>{
+    if(event.buttons == 1){
+        window.addEventListener('mouseover', (e) => paintGrid(e, COLOR_BLACK));
+    }
 });
+
+grid.addEventListener('mouseup', () =>{
+    console.log("in");
+    window.removeEventListener('mouseover',paintGrid);
+})
+
 eraseButton.addEventListener('click', () =>{    
     eraseGrid();
-
 });
 
