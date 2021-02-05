@@ -65,7 +65,7 @@ function paintGrid(elem, color){
 //this function turns all square-grid div to default 
 //and rebuild the grid with gridSize size
 function eraseGrid(){ 
-    grid.querySelectorAll('*').forEach(n => n.remove());    
+    grid.innerHTML = '';
     buildGrid(selectedSize);
 }
 

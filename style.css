@@ -8,6 +8,12 @@ body,
     align-items: center;
     font-family: 'Annie Use Your Telescope', cursive;
 }
+#left-controller > div, 
+#controls, #footer
+#subcontainer-right{
+    display: flex;
+    align-items: center;
+}
 p{
     margin: 0;
     cursor: pointer;
@@ -20,7 +26,6 @@ span{
 a{
     text-decoration: none;
     color: black;
-    margin-left: 12px;
 }
 body{
     margin: 0;
@@ -42,7 +47,7 @@ body{
     margin: 10px;
 }
 #grid{
-    background-color: #EFEFEF;
+    background-color: #FAEBD7;
     height: 550px;
     width: 550px;
     border-radius: 10px;
@@ -57,9 +62,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    font-size: 20px;
 }
 #reset-controller{
     background-color: #FFFFEA;
@@ -102,7 +104,6 @@ body{
 #right-controller{
     padding-bottom: 20px;
     margin-bottom: 20px;
-    font-size: large;
 }
 #big-size-square{
     height: 15px;
@@ -115,14 +116,9 @@ body{
     width: 10px;
     background-color: white;
 }
-#left-controller > div{
-    display: flex;
-    align-items: center;    
-}
 #size-controller{
     margin: 10px 10px 10px 0;
 }
-
 #black-square{
     height: 15px;
     width: 15px;
@@ -148,8 +144,4 @@ body{
     font-size: 17px;
     color: black;
     text-decoration: none;
-    display: flex;
-    align-items: center;
 }
-
-
