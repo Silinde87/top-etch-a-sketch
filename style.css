@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 /*Alignements*/
 body, 
 #container{
@@ -5,6 +6,7 @@ body,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Annie Use Your Telescope', cursive;
 }
 p{
     margin: 0;
@@ -26,10 +28,12 @@ body{
     border-radius: 20px;
     height: 750px;
     width: 800px;
+    padding-bottom: 10px;
 }
 #title{
     color: #FFE4BA;
-    font-size: 60px;
+    font-size: 70px;
+    font-weight: bolder;
     margin: 10px;
 }
 #grid{
@@ -47,7 +51,9 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
 }
 #reset-controller{
     background-color: #FFFFEA;
@@ -57,6 +63,10 @@ body{
     -webkit-box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.71);
     -moz-box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.71);
     box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.71);
+}
+#reset-controller:active{
+    box-shadow: 0 0;    
+    transform: translate(5px, 5px);
 }
 .round-controller{
     background-color: #FFFFEA;
@@ -84,7 +94,8 @@ body{
 }
 #left-controller,
 #right-controller{
-    padding-bottom: 20px;
+        padding-bottom: 20px;
+    margin-bottom: 20px;
     font-size: large;
 }
 #left-controller > span{

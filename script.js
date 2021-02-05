@@ -1,6 +1,6 @@
 //JS
 
-let gridSize = 64;
+let gridSize = 32;
 const COLOR_BLACK = "black";
 
 let grid = document.getElementById('grid');
