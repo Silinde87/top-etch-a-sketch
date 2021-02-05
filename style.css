@@ -44,6 +44,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     cursor: crosshair;
+    z-index: 1;
 }
 #controls{
     height: 100px;
@@ -96,7 +97,7 @@ body{
 #right-controller{
     padding-bottom: 20px;
     margin-bottom: 20px;
-    font-size: large;
+    font-size: large;    
 }
 #left-controller > span{
     margin-left: 37px;    

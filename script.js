@@ -2,7 +2,7 @@
 let grid = document.getElementById('grid');
 let eraseButton = document.getElementById('reset-controller')
 let selectedColor = "black";
-let selectedSize = 16;
+let selectedSize = 32;
 buildGrid(selectedSize);
 
 //This Draggable constructor creates the ability to rotate the rounded controllers
@@ -10,9 +10,8 @@ const sizeController = Draggable.create("#size-controller",{
     type: "rotation",
     bounds:{minRotation:90, maxRotation: 180},
     onDragEnd: () => {
-        sizeController[0].endRotation > 135 ? selectedSize = 32 : selectedSize = 16;
+        sizeController[0].endRotation > 135 ? selectedSize = 32 : selectedSize = 16;        
         eraseGrid();
-        buildGrid(selectedSize);
     }
 });
 const colorController = Draggable.create("#color-controller",{
@@ -65,8 +64,8 @@ function paintGrid(elem, color){
 
 //this function turns all square-grid div to default 
 //and rebuild the grid with gridSize size
-function eraseGrid(){   
-    grid.innerHTML = '';
+function eraseGrid(){ 
+    grid.querySelectorAll('*').forEach(n => n.remove());    
     buildGrid(selectedSize);
 }
 
