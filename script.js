@@ -2,7 +2,7 @@
 let grid = document.getElementById('grid');
 let eraseButton = document.getElementById('reset-controller')
 let selectedColor = "black";
-let selectedSize = 32;
+let selectedSize = 16;
 buildGrid(selectedSize);
 
 //This Draggable constructor creates the ability to rotate the rounded controllers
