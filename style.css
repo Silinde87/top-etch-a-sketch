@@ -17,6 +17,11 @@ span{
     cursor: default;
     user-select: none;
 }
+a{
+    text-decoration: none;
+    color: black;
+    margin-left: 12px;
+}
 body{
     margin: 0;
     padding: 0;
@@ -97,10 +102,18 @@ body{
 #right-controller{
     padding-bottom: 20px;
     margin-bottom: 20px;
-    font-size: large;    
+    font-size: large;
 }
-#left-controller > span{
-    margin-left: 37px;    
+#big-size-square{
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    margin-left: 43px
+}
+#small-size-square{
+    height: 10px;
+    width: 10px;
+    background-color: white;
 }
 #left-controller > div{
     display: flex;
@@ -109,16 +122,34 @@ body{
 #size-controller{
     margin: 10px 10px 10px 0;
 }
-#right-controller > span{
-    margin-left: 87px;
+
+#black-square{
+    height: 15px;
+    width: 15px;
+    background-color: black;    
 }
-#right-controller > div{
+#rgb-square{
+    height: 15px;
+    width: 15px;
+    background: url("chrome-extension://ohcpnigalekghcmgcdcenkpelffpdolg/img/icon16.png");
+    margin-left: 68px; 
+}
+#subcontainer-right{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
 }
 #color-controller{
     margin: 10px 0px 10px 10px;
+}
+#footer{
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 

@@ -9,6 +9,8 @@
         <!--Draggable API for rounded controllers-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/Draggable.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+        <!--Fontawesome import-->
+        <script src="https://kit.fontawesome.com/d1d6edd90f.js" crossorigin="anonymous"></script>
 
     </head>
     <body>
@@ -17,25 +19,29 @@
             <div id="grid" class="inner-sh"></div>
             <div id="controls">
                 <div id="left-controller">
-                    <span>32X</span>
+                    <div id="big-size-square"></div>                    
                     <div>
                         <div id="size-controller" class="round-controller outer-sh">
                             <div class="marker"></div>
                         </div>
-                        <span>16X</span>
+                        <div id="small-size-square"></div> 
                     </div>
                 </div>
                 <p id="reset-controller">ERASE</p>
                 <div id="right-controller">
-                    <span>RGB</span>
-                    <div>
+                    <div id="rgb-square"></div>
+                    <div id="subcontainer-right">
                         <div id="color-controller" class="round-controller outer-sh">
                             <div class="marker"></div>
                         </div>
-                        <span>BLACK</span>
+                        <div id="black-square"></div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="footer">
+            <span>Built & designed by Silinde87 | </span>
+            <a href="https://github.com/Silinde87/etch-a-sketch" target="_blank"><i class="fab fa-github fa-2x"></i></a>            
         </div>
     </body>
 </html>
