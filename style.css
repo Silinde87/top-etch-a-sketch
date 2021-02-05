@@ -7,6 +7,7 @@ body,
     justify-content: center;
     align-items: center;
     font-family: 'Annie Use Your Telescope', cursive;
+    font-weight: bold;
 }
 #left-controller > div, 
 #controls, #footer
@@ -31,14 +32,14 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: #81d9a1;
+    background-color: #81d9a1;    
 }
 #container{
     background-color: #E90418;
     border-radius: 20px;
     height: 750px;
     width: 800px;
-    padding-bottom: 10px;
+    padding-bottom: 10px;    
 }
 #title{
     color: #FFE4BA;
@@ -54,14 +55,14 @@ body{
     display: flex;
     flex-wrap: wrap;
     cursor: crosshair;
-    z-index: 1;
+    z-index: 1;    
 }
 #controls{
     height: 100px;
     width: 97%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;    
 }
 #reset-controller{
     background-color: #FFFFEA;
@@ -80,7 +81,7 @@ body{
     background-color: #FFFFEA;
     border-radius: 50%;
     height: 100px;
-    width: 100px;    
+    width: 100px;       
 }
 .outer-sh{
     -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.71);
@@ -98,37 +99,38 @@ body{
     height:10px;
     right:0px;
     top:45px;
-    width:10px
+    width:10px;        
 }
 #left-controller,
 #right-controller{
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
 }
 #big-size-square{
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     background-color: white;
-    margin-left: 43px
+    margin-left: 40px;    
 }
 #small-size-square{
-    height: 10px;
-    width: 10px;
+    height: 15px;
+    width: 15px;
     background-color: white;
 }
 #size-controller{
     margin: 10px 10px 10px 0;
 }
 #black-square{
-    height: 15px;
-    width: 15px;
+    height: 18px;
+    width: 18px;
     background-color: black;    
 }
 #rgb-square{
-    height: 15px;
-    width: 15px;
-    background: url("chrome-extension://ohcpnigalekghcmgcdcenkpelffpdolg/img/icon16.png");
-    margin-left: 68px; 
+    height: 20px;
+    width: 20px;
+    background: no-repeat url("https://github.com/Silinde87/etch-a-sketch/blob/main/images/rgb2.png?raw=true");
+    background-size: 20px 20px;
+    margin-left: 68px;     
 }
 #subcontainer-right{
     display: flex;
