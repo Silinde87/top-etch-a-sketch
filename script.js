@@ -1,6 +1,6 @@
 //JS
 
-let gridSize = 32;
+let gridSize = 64;
 const COLOR_BLACK = "black";
 
 let grid = document.getElementById('grid');
@@ -36,21 +36,26 @@ function buildGrid(size){
 }
 
 //this function paints the grid
-function paintGrid(elem, color){
-    console.log(elem.buttons);
+function paintGrid(elem, color){    
     if(elem.buttons == 1){
         if(elem.target.classList == 'square-grid'){
             let square = elem.target;    
             square.style.backgroundColor = color;
         }  
+    }else{
+        //Exit condition if mouse is not clicked.
+        return;
     }
 }
 
+//this function turns all square-grid div to default 
+//and rebuild the grid with gridSize size
 function eraseGrid(){   
     grid.innerHTML = '';
     buildGrid(gridSize);
 }
 
+//Returns a random rgb color.
 function getRandomRgb() {
     var num = Math.round(0xffffff * Math.random());
     var r = num >> 16;
@@ -59,16 +64,14 @@ function getRandomRgb() {
     return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
 
-grid.addEventListener('mousedown', event =>{
-    if(event.buttons == 1){
-        window.addEventListener('mouseover', (e) => paintGrid(e, COLOR_BLACK));
+grid.addEventListener('mousedown', event =>{ 
+    paintGridEvent = paintGrid(event, COLOR_BLACK);
+    if(event.buttons == 1){        
+        window.addEventListener('mouseover', (e) => {            
+            paintGrid(e, COLOR_BLACK);
+        });
     }
 });
-
-grid.addEventListener('mouseup', () =>{
-    console.log("in");
-    window.removeEventListener('mouseover',paintGrid);
-})
 
 eraseButton.addEventListener('click', () =>{    
     eraseGrid();
