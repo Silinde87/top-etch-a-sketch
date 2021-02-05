@@ -5,8 +5,18 @@ const COLOR_BLACK = "black";
 
 let grid = document.getElementById('grid');
 let eraseButton = document.getElementById('reset-controller')
-let sizeControler = document.getElementById('size-controller');
-let colorControler = document.getElementById('color-controller');
+
+//This Draggable constructor creates the ability to rotate the rounded controllers
+const sizeController = Draggable.create("#size-controller",{
+    type: "rotation",
+    bounds:{minRotation:90, maxRotation: 180},
+    onDragEnd: () => console.log(sizeController[0].endRotation)
+});
+const colorController = Draggable.create("#color-controller",{
+    type: "rotation",
+    bounds:{minRotation:0, maxRotation: 90},
+    onDragEnd: () => console.log(colorController[0].endRotation)
+});
 
 buildGrid(gridSize);
 
@@ -76,4 +86,3 @@ grid.addEventListener('mousedown', event =>{
 eraseButton.addEventListener('click', () =>{    
     eraseGrid();
 });
-

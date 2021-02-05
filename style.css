@@ -47,8 +47,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px
+    align-items: center;    
 }
 #reset-controller{
     background-color: #FFFFEA;
@@ -63,7 +62,7 @@ body{
     background-color: #FFFFEA;
     border-radius: 50%;
     height: 100px;
-    width: 100px;
+    width: 100px;    
 }
 .outer-sh{
     -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.71);
@@ -75,3 +74,39 @@ body{
     -moz-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.71);
     box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.71);
 }
+.marker {
+    background:#E90418;
+    position: relative;
+    height:10px;
+    right:0px;
+    top:45px;
+    width:10px
+}
+#left-controller,
+#right-controller{
+    padding-bottom: 20px;
+    font-size: large;
+}
+#left-controller > span{
+    margin-left: 37px;    
+}
+#left-controller > div{
+    display: flex;
+    align-items: center;    
+}
+#size-controller{
+    margin: 10px 10px 10px 0;
+}
+#right-controller > span{
+    margin-left: 64px;
+}
+#right-controller > div{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#color-controller{
+    margin: 10px 0px 10px 10px;
+}
+
+

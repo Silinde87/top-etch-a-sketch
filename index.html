@@ -6,15 +6,35 @@
         <title>etch-a-sketch</title>
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="script.js" defer></script>
+        <!--Draggable API for rounded controllers-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/Draggable.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
     </head>
     <body>
         <div id="container" class="outer-sh">
             <div id="title"><span>etch-a-sketch</span></div>
             <div id="grid" class="inner-sh"></div>
             <div id="controls">
-                <div id="size-controller" class="round-controller outer-sh"></div>
+                <div id="left-controller">
+                    <span>32X</span>
+                    <div>
+                        <div id="size-controller" class="round-controller outer-sh">
+                            <div class="marker"></div>
+                        </div>
+                        <span>64X</span>
+                    </div>
+                </div>
                 <p id="reset-controller">ERASE</p>
-                <div id="color-controller" class="round-controller outer-sh"></div>
+                <div id="right-controller">
+                    <span>BLACK</span>
+                    <div>
+                        <div id="color-controller" class="round-controller outer-sh">
+                            <div class="marker"></div>
+                        </div>
+                        <span>RGB</span>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
