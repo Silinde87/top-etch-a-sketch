@@ -94,7 +94,7 @@ body{
 }
 #left-controller,
 #right-controller{
-        padding-bottom: 20px;
+    padding-bottom: 20px;
     margin-bottom: 20px;
     font-size: large;
 }
@@ -109,7 +109,7 @@ body{
     margin: 10px 10px 10px 0;
 }
 #right-controller > span{
-    margin-left: 64px;
+    margin-left: 87px;
 }
 #right-controller > div{
     display: flex;

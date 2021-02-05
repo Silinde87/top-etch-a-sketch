@@ -1,24 +1,29 @@
 //JS
-
-let gridSize = 32;
-const COLOR_BLACK = "black";
-
 let grid = document.getElementById('grid');
 let eraseButton = document.getElementById('reset-controller')
+let selectedColor = "black";
+let selectedSize = 16;
+buildGrid(selectedSize);
 
 //This Draggable constructor creates the ability to rotate the rounded controllers
 const sizeController = Draggable.create("#size-controller",{
     type: "rotation",
     bounds:{minRotation:90, maxRotation: 180},
-    onDragEnd: () => console.log(sizeController[0].endRotation)
+    onDragEnd: () => {
+        sizeController[0].endRotation > 135 ? selectedSize = 32 : selectedSize = 16;
+        eraseGrid();
+        buildGrid(selectedSize);
+    }
 });
 const colorController = Draggable.create("#color-controller",{
     type: "rotation",
     bounds:{minRotation:0, maxRotation: 90},
-    onDragEnd: () => console.log(colorController[0].endRotation)
+    onDragEnd: () => {
+        colorController[0].endRotation < 45 ? selectedColor = 'black' : selectedColor = 'random';
+    }
 });
 
-buildGrid(gridSize);
+
 
 //This function builds the grid with the size as a parameter.
 function buildGrid(size){
@@ -62,7 +67,7 @@ function paintGrid(elem, color){
 //and rebuild the grid with gridSize size
 function eraseGrid(){   
     grid.innerHTML = '';
-    buildGrid(gridSize);
+    buildGrid(selectedSize);
 }
 
 //Returns a random rgb color.
@@ -74,15 +79,21 @@ function getRandomRgb() {
     return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
 
+//paintGrid when mouseover event in selectedColor
 grid.addEventListener('mousedown', event =>{ 
-    paintGridEvent = paintGrid(event, COLOR_BLACK);
+    paintGridEvent = paintGrid(event, selectedColor);
     if(event.buttons == 1){        
-        window.addEventListener('mouseover', (e) => {            
-            paintGrid(e, COLOR_BLACK);
+        window.addEventListener('mouseover', (e) => {
+            if(selectedColor == 'random'){
+                paintGrid(e, getRandomRgb());
+            }else{
+                paintGrid(e, selectedColor);
+            }            
         });
     }
 });
 
+//Clean the grid event.
 eraseButton.addEventListener('click', () =>{    
     eraseGrid();
 });
